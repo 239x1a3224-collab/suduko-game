@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 40px);
+    grid-template-rows: repeat(9, 40px);
+    gap: 0;
+    margin: 0 auto 20px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #999;
+    outline: none;
+}
+
+.cell:focus {
+    background: #eaf4ff;
+}
+
+.fixed {
+    background: #f0f0f0;
+    font-weight: bold;
+    color: #000;
+}
+
+.cell:nth-child(3n) {
+    border-right: 2px solid #000;
+}
+
+.cell:nth-child(9n + 1) {
+    border-left: 2px solid #000;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 8px;
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+}
